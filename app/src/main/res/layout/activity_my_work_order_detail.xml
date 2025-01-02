@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="selectedWorkOrder"
+            type="com.example.demandmanagementsystem.model.MyWorkOrders" />
+
+        <import type="android.view.View"
+            />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/constraintbacraund"
+        tools:context=".view.CreateWorkOrderActivity">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarWorkOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbarColor"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_goneMarginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarWorkOrder"
+            android:layout_marginBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:id="@+id/layoutWorkOrderRequestId"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="64dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textWorkOrderRequestId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="İş Emri No"
+                        android:text="@{selectedWorkOrder.workOrderID}"
+                        android:textColor="@color/black"
+                        android:inputType="none"
+                        android:enabled="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="64dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textWorkOrderPersonToDoJob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="İş Emrini Veren Kişi"
+                        android:text="@{selectedWorkOrder.workOrderPersonToDoJob}"
+                        android:textColor="@color/black"
+                        android:inputType="none"
+                        android:enabled="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="155dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textWorkOrderDepartment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="İş Emri Departmanı"
+                        android:text="@{selectedWorkOrder.workOrderDepartment}"
+                        android:textColor="@color/black"
+                        android:inputType="none"
+                        android:enabled="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="64dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textWorkOrderCreateUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="İşi Yapacak Kişi"
+                        android:textColor="@color/black"
+                        android:inputType="none"
+                        android:enabled="false"
+                        android:text="@{selectedWorkOrder.workOrdercreateUserName}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="517dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textWorkOrderAssetInformation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:inputType="none"
+                        android:enabled="false"
+                        android:text="@{selectedWorkOrder.workOrderAssetInformation}"
+                        android:hint="Varlık Bilgisi" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="517dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textWorkOrderCase"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{selectedWorkOrder.workOrderCase}"
+                        android:hint="İş Emri Durumu"
+                        android:textColor="@color/black"
+                        android:inputType="none"
+                        android:enabled="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:id="@+id/relativeLayoutRequestDetail">
+
+                    <Button
+                        android:id="@+id/openMenuButtonWorkOrderRequest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Talep Bilgileri"
+                        android:backgroundTint="@color/colorBlack"
+                        android:textColor="@color/white"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center"
+                        android:elevation="20dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/menuCardViewWorkOrderRequest"
+                        android:layout_below="@id/openMenuButtonWorkOrderRequest"
+                        android:visibility="gone"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="10dp">
+
+                        <!-- İçerik -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_backraound"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/layoutWorkOrderRequestSubject"
+                                android:paddingTop="10dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="427dp"
+                                android:textColor="@color/black"
+                                android:inputType="none"
+                                android:enabled="false"
+                                android:visibility="@{selectedWorkOrder.workOrderRequestSubject != null &amp; !selectedWorkOrder.workOrderRequestSubject.isEmpty() ? View.VISIBLE : View.GONE}" >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/textWorkOrderRequestSubject"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Talep Konusu"
+                                    android:text="@{selectedWorkOrder.workOrderRequestSubject}"
+                                    android:textColor="@color/black"
+                                    android:inputType="none"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:id="@+id/layoutWorkOrderRequestDescription"
+                                android:visibility="@{selectedWorkOrder.workOrderRequestDescription != null &amp; !selectedWorkOrder.workOrderRequestDescription.isEmpty() ? View.VISIBLE : View.GONE}"
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="517dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/textWorkOrderRequestDescription"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Talep Açıklaması"
+
+                                    android:text="@{selectedWorkOrder.workOrderRequestDescription}"
+                                    android:textColor="@color/black"
+                                    android:inputType="none"
+                                    android:enabled="false" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/relativeWorkOrderInfo">
+
+                    <Button
+                        android:id="@+id/openMenuButtonWorkOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="İş Emri Bilgileri"
+                        android:backgroundTint="@color/colorBlack"
+                        android:textColor="@color/white"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center"
+                        android:elevation="20dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/menuCardViewWorkOrder"
+                        android:layout_below="@id/openMenuButtonWorkOrder"
+                        android:visibility="gone"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="10dp">
+
+                        <!-- İçerik -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_backraound"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="427dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/textWorkOrderSubject"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:inputType="none"
+                                    android:enabled="false"
+                                    android:text="@{selectedWorkOrder.workOrderSubject}"
+                                    android:hint="İş Emri Konusu" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="517dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/textWorkOrderDescription"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{selectedWorkOrder.workOrderDescription}"
+                                    android:hint="İş Emri Açıklaması"
+                                    android:textColor="@color/black"
+                                    android:inputType="none"
+                                    android:enabled="false"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutWorkOrderDetail"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/openMenuButtonWorkOrderResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="İş Emri Sonuç Bilgileri"
+                        android:backgroundTint="@color/colorBlack"
+                        android:textColor="@color/white"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center"
+                        android:elevation="20dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/menuCardViewWorkOrderResult"
+                        android:layout_below="@id/openMenuButtonWorkOrderResult"
+                        android:visibility="gone"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="10dp">
+
+                        <!-- İçerik -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_backraound"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                app:cardCornerRadius="8dp"
+                                android:id="@+id/layoutWorkOrderUserSubject"
+                                app:cardElevation="4dp"
+                                app:cardUseCompatPadding="true"
+                                app:cardPreventCornerOverlap="true"
+                                >
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:text="İş Emri"/>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:text="Sonuç Türü:"/>
+                                    </LinearLayout>
+                                    <TextView
+                                        android:id="@+id/workOrderType"
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:text="@{selectedWorkOrder.workOrderUserSubject}"
+                                        />
+
+                                    <Spinner
+                                        android:id="@+id/spinnerWorkOrderUserSubject"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:textSize="15sp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:id="@+id/layoutWorkOrderSubDescription"
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="64dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/textWorkOrderSubDescription"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="İş Emri Sonuç Açıklaması"
+                                    android:text="@{selectedWorkOrder.workOrderSubDescription}"
+
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

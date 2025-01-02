@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/startedActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Aktiviteye Başla"
+        android:visible="false" />
+    <item
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_save_24"
+        android:title="Kaydet"
+        android:visible="false" />
+    <item
+        android:id="@+id/jobReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="İşi İade Et"
+        android:visible="false" />
+    <item
+        android:id="@+id/confirmJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="İşi Onayla"
+        android:visible="false" />
+    <item
+        android:id="@+id/createWorkOrderDetailMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="İş Emri Oluştur" />
+    <item
+        android:id="@+id/completed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_check_24"
+        android:title="Tamamlandı"
+        android:visible="false" />
+    <item
+        android:id="@+id/denied"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/clear"
+        android:title="Reddedildi"
+        android:visible="false" />
+</menu>

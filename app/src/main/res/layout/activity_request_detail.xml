@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="selectedRequest"
+            type="com.example.demandmanagementsystem.model.RequestData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/constraintbacraund"
+        tools:context=".view.RequestDetailActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbarColor"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarRequest">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="64dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textRequestDetailRequestId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:hint="Talep ID"
+                        android:text="@{selectedRequest.requestID}"
+                        android:textColor="@android:color/black"
+                        android:inputType="none"
+                        android:enabled="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="64dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textRequestDetailUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:hint="Ad Soyad"
+                        android:text="@{selectedRequest.requestName}"
+                        android:textColor="@android:color/black"
+                        android:inputType="none"
+                        android:enabled="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="155dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textRequestDetailDepartment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Talep Alınan Departman"
+                        android:text="@{selectedRequest.requestDepartment}"
+                        android:textColor="@android:color/black"
+                        android:inputType="none"
+                        android:enabled="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="245dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textRequestSendDetailDepartment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:hint="Talep Gönderilen Departman"
+                        android:text="@{selectedRequest.requestSendDepartment}"
+                        android:inputType="none"
+                        android:textColor="@android:color/black"
+                        android:enabled="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="517dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textRequestDetailCase"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:hint="Talep Durumu"
+                        android:text="@{selectedRequest.requestCase}"
+                        android:textColor="@android:color/black"
+                        android:inputType="none"
+                        android:enabled="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutRequestDenied"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:visibility="gone"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="517dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textRequestDenied"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:hint="Reddedilme Nedeni"
+                        android:text="@{selectedRequest.requestDenied}"
+                        android:textColor="@android:color/black"
+                        android:inputType="none"
+                        android:enabled="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutRequestDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/openMenuButtonRequest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Talep Bilgileri"
+                        android:backgroundTint="@color/colorBlack"
+                        android:textColor="@color/white"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center"
+                        android:elevation="20dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/menuCardViewRequest"
+                        android:layout_below="@id/openMenuButtonRequest"
+                        android:visibility="gone"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="10dp">
+
+                        <!-- İçerik -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_backraound"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="427dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/textRequestDetailRequestType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusableInTouchMode="false"
+                                    android:hint="Talep Tipi"
+                                    android:text="@{selectedRequest.requestType}"
+                                    android:textColor="@android:color/black"
+                                    android:inputType="none"
+                                    android:enabled="false" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="427dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/textRequestDetailSubject"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusableInTouchMode="false"
+                                    android:hint="Talep Konusu"
+                                    android:text="@{selectedRequest.requestSubject}"
+                                    android:textColor="@android:color/black"
+                                    android:inputType="none"
+                                    android:enabled="false" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="517dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/textRequestDetailDescription"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusableInTouchMode="false"
+                                    android:hint="Talep Açıklaması"
+                                    android:text="@{selectedRequest.requestDescription}"
+                                    android:textColor="@android:color/black"
+                                    android:inputType="none"
+                                    android:enabled="false" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="517dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/textRequestDetailDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusableInTouchMode="false"
+                                    android:hint="Talep Tarihi"
+                                    android:text="@{selectedRequest.requestDate}"
+                                    android:textColor="@android:color/black"
+                                    android:inputType="none"
+                                    android:enabled="false" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutWorkOrder"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/openMenuButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="İş Emri Sonuç Bilgileri"
+                        android:backgroundTint="@color/colorBlack"
+                        android:textColor="@color/white"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center"
+                        android:elevation="20dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/menuCardView"
+                        android:layout_below="@id/openMenuButton"
+                        android:visibility="gone"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="10dp">
+
+                        <!-- İçerik -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_backraound"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:id="@+id/layoutRequestWorkOrderUserSubject">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/textRequestWorkOrderUserSubject"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusableInTouchMode="false"
+                                    android:hint="İş Emri Sonuç Türü"
+                                    android:text="@{selectedRequest.requestWorkOrderUserSubject}"
+                                    android:textColor="@android:color/black"
+                                    android:inputType="none"
+                                    android:enabled="false" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:id="@+id/layoutRequestWorkOrderSubDescription">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/textRequestWorkOrderSubDescription"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusableInTouchMode="false"
+                                    android:hint="İş Emri Sonuç Açıklaması"
+                                    android:text="@{selectedRequest.requestWorkOrderSubDescription}"
+                                    android:textColor="@android:color/black"
+                                    android:inputType="none"
+                                    android:enabled="false" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

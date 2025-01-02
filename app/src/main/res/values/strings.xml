@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TALEP YÖNETİM SİSTEMİ</string>
+    <string name="notification_icon_description">Atanan İşlerim</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="headerTextSize">28sp</dimen>
+</resources>

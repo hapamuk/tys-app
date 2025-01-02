@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/createdRequests"
+        android:icon="@drawable/work_history"
+        android:title="Oluşturulan Taleplerim" />
+    <item
+        android:id="@+id/createdWorkOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/work_history"
+        android:title="Oluşturulan İş Emirlerim" />
+    <item
+        android:id="@+id/createRequest"
+        android:icon="@drawable/create"
+        android:title="Talep Oluştur" />
+    <item
+        android:id="@+id/createWorkOrder"
+        android:icon="@drawable/create"
+        android:title="İş Emri Oluştur" />
+    <item
+        android:id="@+id/addPerson"
+        android:icon="@drawable/person_add"
+        android:title="Kullanıcı Tanımları" />
+    <item
+        android:id="@+id/myWorkOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/my_work_order"
+        android:title="İş Emirlerim" />
+    <item
+        android:id="@+id/profileUserInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:title="Profil Bilgilerim" />
+    <item
+        android:id="@+id/logOut"
+        android:icon="@drawable/baseline_logout_24"
+        android:title="Çıkış Yap" />
+</menu>
