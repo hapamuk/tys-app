@@ -3,7 +3,4 @@ TALEP YÖNETİM SİSTEMİ
 -Kotlin, Firabase, MVVM
 
 
-Farklı departmanların sorunlarını ilgili departmanlara iletip bu sorunların 
-çözümlerine iş emirleri oluşturan, talep ve iş emirlerini takip edebildiği Kotlin 
-dilinde Android Studio platformunda Firebase Authentication ve Firestore veri 
-tabanı ile geliştirilen bir mobil uygulamasıdır.
+Farklı departmanlar yaşadıkları sorunlara ilişkin arıza kayıtlarını, arızaların çözümünden sorumlu olan  ilgili departmanlara iş talepleri açar. Sorunların çözümü ile ilgili sorumlu formen  kendi departmanı içerisindeki personele iş emri oluşturur. İşin başlangıç ve bitişine kadar geçen aktivasyonları takip eder. Hem taleplerin hem de iş emirlerinin takip edilebildiği Kotlin dilinde Android Studio platformunda Firebase Authentication ve Firestore veritabanı ile geliştirilen bir mobil uygulamasıdır.
